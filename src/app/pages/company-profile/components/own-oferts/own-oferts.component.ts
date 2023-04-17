@@ -8,12 +8,16 @@ import { OfertI } from 'src/app/core/services/ofert/models/ofert.interface';
   styleUrls: ['./own-oferts.component.scss']
 })
 export class OwnOfertsComponent {
-@Input() public ofertToShow?: OfertI[];
-@Output() public watchDetails = new EventEmitter<void>();
+@Input() public ofert?: OfertI;
+@Output() public onRemoveOfert = new EventEmitter<void>();
 
 constructor(
   private router: Router
 ){}
+
+public deletedOfert(){
+  this.onRemoveOfert.emit();
+}
 
 public editOfert(_id: string) {
   this.router.navigate(['edit-ofert', _id]);

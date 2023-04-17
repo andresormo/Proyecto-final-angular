@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 
-const API_URL= 'https://este-si-5xt9.vercel.app'
+const API_URL= 'https://goodjob-3rcu.vercel.app'
 
 @Injectable({
   providedIn: 'root'

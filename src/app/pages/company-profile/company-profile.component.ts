@@ -12,9 +12,9 @@ import { OfertService } from 'src/app/core/services/ofert/ofert.service';
   styleUrls: ['./company-profile.component.scss'],
 })
 export class CompanyProfileComponent implements OnInit {
-  public ofertToShow?: OfertI[];
+  public oferts?: OfertI[];
   public user?: IUser[];
-  // public ofertOfCompany?: OfertI[];
+
 
   constructor(
     private router: Router,
@@ -22,19 +22,26 @@ export class CompanyProfileComponent implements OnInit {
     private userService: AuthService
   ) {}
   public ngOnInit(): void {
+    this.getOwnOfert();
+  }
+
+  public getOwnOfert(){
     const idUser = this.userService.getUserId();
     this.ofertService.getOfert().subscribe((ofert: OfertI[]) => {
       if (idUser) {
         const userOferts = ofert.filter((empresa) => {
           return empresa.empresa.some((nombre) => nombre._id === idUser);
         });
-        this.ofertToShow = userOferts;
+        this.oferts = userOferts;
       }
     });
   }
-
   public createOfert() {
     this.router.navigate(['create-ofert']);
+  }
+
+  public deletedOfert(id:string){
+    this.ofertService.deleteOfert(id).subscribe(()=> this.getOwnOfert());
   }
 
 }

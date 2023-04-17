@@ -8,7 +8,7 @@ import {
 } from 'rxjs';
 import { IUser, IUserSignInResponse, UserRequestBody } from './models/auth.models';
 
-const AUTH_URL = 'https://este-si-5xt9.vercel.app/users';
+const AUTH_URL = 'https://goodjob-3rcu.vercel.app/users';
 const TOKEN_KEY = 'jwt-auth-token';
 
 @Injectable({

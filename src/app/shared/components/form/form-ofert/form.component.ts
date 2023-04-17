@@ -23,6 +23,7 @@ public sectorOption = sectorOption;
 
 public hasFormError: boolean= false;
 public hasSuccess: boolean = false;
+public hasDeleted: boolean = false;
 
 constructor(
   private formBuilder: FormBuilder,
@@ -34,19 +35,19 @@ constructor(
 
 public ngOnInit(): void {
   this.initForm();
-
 }
 
 public handleOfert(){
-  console.log(this.ofertForm?.value, this.ofertForm?.valid);
   if(this.ofertForm?.valid){
     if(this.editMode){
       this.editOfert();
+
     }else{
       this.createOfert();
+      this.hasSuccess = true;
     }
     this.ofertForm?.reset();
-    this.hasSuccess = true;
+
   } else{
     this.hasFormError = true;
   }
@@ -61,7 +62,6 @@ private createOfert(){
 
 private editOfert(){
   if(!this.oferta){return;}
- console.log(this.oferta);
   this.ofertService.editOfert(this.ofertForm?.value, this.oferta._id).subscribe((ofert)=>{
     this.router.navigate(['../company-profile']);
   })

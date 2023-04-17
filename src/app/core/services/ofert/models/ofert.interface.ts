@@ -16,18 +16,6 @@ export interface ApiOfertI {
   __v?:number
 }
 
-// export interface ApiEmpresaI{
-//   portada:string[],
-//   _id:string,
-//   nombre:string,
-//   cif:string,
-//   direccion:string,
-//   ofertas: ApiOfertI,
-//   createdAt?: string,
-//   updateAt?: string,
-//   __v?:number
-// }
-
 export interface OfertI{
   _id: string,
   empresa: IUser[],
@@ -40,15 +28,6 @@ export interface OfertI{
   telefono:string,
   email:string
 }
-
-// export interface EmpresaI{
-//   portada:string[],
-//   _id:string,
-//   nombre:string,
-//   cif:string,
-//   direccion:string,
-//   ofertas: OfertI,
-// }
 
 export interface Contrato{
   tipo:ContratosTypes

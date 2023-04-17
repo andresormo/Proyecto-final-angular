@@ -28,16 +28,14 @@
   margin-bottom: 10px;
 }
 
-button {
-  margin: 5px;
-  background-color: #38b6ff;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
+.btn{
+  display: flex;
+  flex-direction: column;
+  &--delete{
+    background-color: red;
+  }
+  &--delete:hover{
+    background-color: rgb(173, 3, 3);
+  }
 }
 
-button:hover {
-  background-color: #0056b3;
-}

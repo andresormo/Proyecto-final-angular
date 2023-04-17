@@ -98,9 +98,11 @@
 
   <div class="seccion">
     <button type="submit">{{editMode ? 'Editar' :'Crear'}}</button>
+    <button *ngIf="editMode">Eliminar</button>
+    <span *ngIf="hasDeleted" class="control__success">Oferta eliminada con éxito</span>
     <span *ngIf="hasFormError" class="control__error">Hay errores en el formulario, revisalo</span>
     <span *ngIf="hasSuccess" class="control__success">
-     Éxito creando el producto
+     Éxito creando la oferta
     </span>
   </div>
   <button class="back"
