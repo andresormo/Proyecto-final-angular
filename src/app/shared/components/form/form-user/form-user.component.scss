@@ -1,0 +1,21 @@
+.form{
+  padding: 20px;
+  width: 400px;
+  background-color: #38b6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.seccion{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#f1cfcfe1 ;
+  width: 350px;
+  height: 100px;
+  margin: 8px;
+  border-radius: 25px;
+  padding: 15px;
+}

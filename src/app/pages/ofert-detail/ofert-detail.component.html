@@ -1,9 +1,21 @@
-<div
-*ngIf="oferta"
-class="main"
->
-<p>{{oferta.puesto}}</p>
-<p>{{oferta.descripcion}}</p>
-<p *ngFor="let user of oferta.empresa">{{user.nombre}}</p>
-<button *ngFor="let user of oferta.empresa" (click)="navigateToDetailCompany(user._id)">Ver empresa</button>
+<div *ngIf="oferta" class="main">
+  <div class="container">
+    <h4 class="title">{{ oferta.puesto }}</h4>
+    <p class="item">{{ oferta.salario }}€/mes</p>
+    <img class="img" src="{{ oferta.portada }}" alt="" />
+    <p class="descripcion">{{ oferta.descripcion }}</p>
+    <p class="item">Tipo de contrato: {{ oferta.contrato }}</p>
+    <p class="item">Sector: {{ oferta.sector }}</p>
+    <p class="item">Teléfono: {{ oferta.telefono }}</p>
+    <p class="item">Email: {{ oferta.email }}</p>
+    <p class="item" *ngFor="let user of oferta.empresa">
+      Empresa contratante: {{ user.nombre }}
+    </p>
+    <button
+      *ngFor="let user of oferta.empresa"
+      (click)="navigateToDetailCompany(user._id)"
+    >
+      Ver empresa
+    </button>
+  </div>
 </div>

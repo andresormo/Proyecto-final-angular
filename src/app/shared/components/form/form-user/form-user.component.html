@@ -1,146 +1,132 @@
 <form
-*ngIf="userForm"
-[formGroup]="userForm"
-(submit)="handleUser()"
+  *ngIf="userForm"
+  [formGroup]="userForm"
+  (submit)="handleUser()"
+  class="form"
 >
-<div>
-  <h4>E-mail</h4>
-  <input
-  formControlName="email"
-  >
-  <p
-  class="control__error"
-  *ngIf="!userForm.get('email')?.valid
-  && userForm.get('email')?.touched "
-  >El campo es requerido</p>
-</div>
-<div>
-  <h4>Contraseña</h4>
-<input
-type="password"
-formControlName="password"
->
-<p
-class="control__error"
-*ngIf="!userForm.get('password')?.valid
-&& userForm.get('password')?.touched"
->El campo es requerido o hay errores en el campo</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">E-mail</h4>
+    <input class="input"  formControlName="email" />
+    <p
+      class="control__error"
+      *ngIf="!userForm.get('email')?.valid && userForm.get('email')?.touched"
+    >
+      El campo es requerido
+    </p>
+  </div>
+  <div class="seccion">
+    <h4 class="title">Contraseña</h4>
+    <input class="input" type="password" formControlName="password" />
+    <p
+      class="control__error"
+      *ngIf="
+        !userForm.get('password')?.valid && userForm.get('password')?.touched
+      "
+    >
+      El campo es requerido o hay errores en el campo
+    </p>
+  </div>
 
-<div>
-  <h4>Cuenta de usuario</h4>
-  <input
-  type="radio"
-  name="rol" value="user"
-  formControlName="rol"
-  >
-  <h4>Cuenta de empresa</h4>
-  <input type="radio"
-  name="rol"
-  value="company"
-  formControlName="rol"
-  >
-</div>
+  <div class="seccion">
+    <!-- <h4 class="title">Cuenta de usuario</h4> -->
+    <!-- <input type="radio" name="rol" value="user" formControlName="rol" /> -->
+    <h4 class="title">Cuenta de empresa</h4>
+    <input type="radio" name="rol" value="company" formControlName="rol" />
+  </div>
 
-<div>
-  <h4>Nombre de la Empresa</h4>
-  <input
-  formControlName="nombre"
-  >
-  <p
-class="control__error"
-*ngIf="!userForm.get('nombre')?.valid
-&& userForm.get('nombre')?.touched"
->El campo es requerido</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">Nombre de la Empresa</h4>
+    <input class="input" formControlName="nombre" />
+    <p
+      class="control__error"
+      *ngIf="!userForm.get('nombre')?.valid && userForm.get('nombre')?.touched"
+    >
+      El campo es requerido
+    </p>
+  </div>
 
-<div>
-  <h4>Cif de la empresa</h4>
-  <input
-  formControlName="cif"
-  >
-  <p
-  class="control__error"
-  *ngIf="!userForm.get('cif')?.valid
-  && userForm.get('cif')?.touched"
-  >El campo es requerido</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">Cif de la empresa</h4>
+    <input class="input" formControlName="cif" />
+    <p
+      class="control__error"
+      *ngIf="!userForm.get('cif')?.valid && userForm.get('cif')?.touched"
+    >
+      El campo es requerido
+    </p>
+  </div>
 
-<div>
-  <h4>Direccion de la empresa</h4>
-  <input
-  formControlName="direccion"
-  >
-  <p
-  class="control__error"
-  *ngIf="!userForm.get('direccion')?.valid
-  && userForm.get('direccion')?.touched"
-  >El campo es requerido</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">Direccion de la empresa</h4>
+    <input class="input" formControlName="direccion" />
+    <p
+      class="control__error"
+      *ngIf="
+        !userForm.get('direccion')?.valid && userForm.get('direccion')?.touched
+      "
+    >
+      El campo es requerido
+    </p>
+  </div>
 
-<div>
-  <h4>Nº</h4>
-  <input
-  formControlName="numero"
-  >
-  <p
-  class="control__error"
-  *ngIf="!userForm.get('numero')?.valid
-  && userForm.get('numero')?.touched"
-  >El campo es requerido</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">Número</h4>
+    <input class="input" formControlName="numero" />
+    <p
+      class="control__error"
+      *ngIf="!userForm.get('numero')?.valid && userForm.get('numero')?.touched"
+    >
+      El campo es requerido
+    </p>
+  </div>
 
-<div>
-  <h4>Codigo postal</h4>
-  <input
-  formControlName="cp"
-  >
-  <p
-  class="control__error"
-  *ngIf="!userForm.get('cp')?.valid
-  && userForm.get('cp')?.touched"
-  >El campo es requerido</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">Codigo postal</h4>
+    <input  class="input"  formControlName="cp" />
+    <p
+      class="control__error"
+      *ngIf="!userForm.get('cp')?.valid && userForm.get('cp')?.touched"
+    >
+      El campo es requerido
+    </p>
+  </div>
 
-<div>
-  <h4>Localidad de la empresa</h4>
-  <input
-  formControlName="localidad"
-  >
-  <p
-  class="control__error"
-  *ngIf="!userForm.get('localidad')?.valid
-  && userForm.get('localidad')?.touched"
-  >El campo es requerido</p>
-</div>
+  <div class="seccion">
+    <h4 class="title">Localidad de la empresa</h4>
+    <input  class="input"  formControlName="localidad" />
+    <p
+      class="control__error"
+      *ngIf="
+        !userForm.get('localidad')?.valid && userForm.get('localidad')?.touched
+      "
+    >
+      El campo es requerido
+    </p>
+  </div>
 
-<div>
-  <h4>Imagen de la empresa</h4>
-  <input
-  formControlName="portada"
-  type="file"
-  >
-</div>
+  <div class="seccion">
+    <h4 class="title">Imagen de la empresa</h4>
+    <input  class="input"  formControlName="portada" type="file" />
+  </div>
 
-<div>
-  <h4>Capital de la empresa</h4>
-  <input
-  formControlName="capital"
-  >
-</div>
+  <div class="seccion">
+    <h4 class="title">Capital de la empresa</h4>
+    <input  class="input"  formControlName="capital" />
+  </div>
 
-<div>
-  <h4>Numero de trabajadores de la empresa</h4>
-  <input
-  formControlName="trabajadores"
-  >
-</div>
+  <div class="seccion">
+    <h4 class="title">Numero de trabajadores de la empresa</h4>
+    <input  class="input"  formControlName="trabajadores" />
+  </div>
 
-<button type="submit">Enviar</button>
-  <span *ngIf="hasFormError" class="control__error">Hay errores en el formulario, revisalo</span>
-  <span *ngIf="hasSuccess" class="control__success">
-   Éxito creando el producto, puedes verlo en la <a [routerLink]="['../company-profile']">lista</a>
-  </span>
-
+  <div class="seccion">
+    <button type="submit">Enviar</button>
+    <span *ngIf="hasFormError" class="control__error"
+      >Hay errores en el formulario, revisalo</span
+    >
+    <span *ngIf="hasSuccess" class="control__success">
+      Éxito creando el producto, puedes verlo en la
+      <a [routerLink]="['../company-profile']">lista</a>
+    </span>
+  </div>
 </form>
-

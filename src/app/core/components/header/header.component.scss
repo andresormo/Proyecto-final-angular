@@ -34,13 +34,14 @@
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #eb3346;
   border: none;
   color: white;
-  height: 70px;
-  width: 70px;
+  width: 90px;
   border-radius: 80px;
-  margin-left: 10px;
   cursor: pointer;
   &--in {
     background-color: #f1cfcfe1;

@@ -25,12 +25,12 @@ public hasFormError: boolean= false;
 public hasSuccess: boolean = false;
 public hasDeleted: boolean = false;
 
+
 constructor(
   private formBuilder: FormBuilder,
   private ofertService: OfertService,
   private router: Router,
   private userService:AuthService,
-
 ){}
 
 public ngOnInit(): void {
@@ -70,7 +70,6 @@ private editOfert(){
 public returnToProfile(){
   this.router.navigate(['company-profile']);
 }
-
 
 private initForm(){
   const userId = this.userService.getUserId();
