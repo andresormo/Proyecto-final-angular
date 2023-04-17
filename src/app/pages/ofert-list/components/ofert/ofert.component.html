@@ -1,0 +1,8 @@
+
+  <div *ngIf="ofertToShow" class="ofert">
+    <p class="puesto">{{ ofertToShow.puesto| titlecase }}</p>
+    <img class="img" src="{{ofertToShow.portada}}" alt="">
+    <p class="salario">{{ ofertToShow.salario }}€/mes</p>
+    <button (click)="navigateToDetail(ofertToShow._id)" >Ver más</button>
+  </div>
+

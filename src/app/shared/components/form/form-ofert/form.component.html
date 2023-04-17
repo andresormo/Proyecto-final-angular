@@ -1,0 +1,114 @@
+
+  <form
+  *ngIf="ofertForm"
+  [formGroup]="ofertForm"
+  (submit)="handleOfert()"
+  class="form"
+  >
+  <div class="seccion">
+    <h4 class="title">Puesto que demanda</h4>
+    <input
+    formControlName="puesto"
+    >
+    <p
+    class="control__error"
+    *ngIf="!ofertForm.get('puesto')?.valid
+    && ofertForm.get('puesto')?.touched "
+    >El campo es requerido</p>
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Salario mensual</h4>
+    <input
+    formControlName="salario"
+    >
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Describe la oferta</h4>
+    <textarea class="textarea"
+    placeholder="Descripcion"
+    formControlName="descripcion"
+    ></textarea>
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Selecciona el tipo de contrato</h4>
+    <select
+    formControlName="contrato"
+    >
+  <option
+  *ngFor="let option of contratoOption"
+  [value]="option.value">
+  {{option.text}}</option>
+  </select>
+  <p
+  class="control__error"
+  *ngIf="!ofertForm.get('contrato')?.valid
+  && ofertForm.get('contrato')?.touched "
+  >El campo es requerido</p>
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Seleccion el sector</h4>
+    <select
+    formControlName="sector">
+      <option
+      *ngFor="let option of sectorOption"
+      [value]="option.value">
+      {{option.text}}</option>
+    </select>
+    <p
+    class="control__error"
+    *ngIf="!ofertForm.get('sector')?.valid
+    && ofertForm.get('sector')?.touched "
+    >El campo es requerido</p>
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Añade un portada para tu oferta</h4>
+    <input type="file"
+    formControlName="portada"
+    >
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Agrega un número de telefono</h4>
+    <input
+    formControlName="telefono"
+    >
+    <p
+    class="control__error"
+    *ngIf="!ofertForm.get('telefono')?.valid
+    && ofertForm.get('telefono')?.touched "
+    >El campo es requerido</p>
+  </div>
+
+  <div class="seccion">
+    <h4 class="title">Añade el email</h4>
+    <input
+    formControlName="email"
+    >
+    <p
+    class="control__error"
+    *ngIf="!ofertForm.get('email')?.valid
+    && ofertForm.get('email')?.touched "
+    >El campo es requerido</p>
+  </div>
+
+  <div class="seccion">
+    <button type="submit">{{editMode ? 'Editar' :'Crear'}}</button>
+    <span *ngIf="hasFormError" class="control__error">Hay errores en el formulario, revisalo</span>
+    <span *ngIf="hasSuccess" class="control__success">
+     Éxito creando el producto
+    </span>
+  </div>
+  <button class="back"
+    (click)="returnToProfile()"
+  >
+    VOLVER AL PERFIL
+  </button>
+  </form>
+
+
+

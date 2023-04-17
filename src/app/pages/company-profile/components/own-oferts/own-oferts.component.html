@@ -1,0 +1,11 @@
+<div class="container">
+  <div *ngFor="let ofert of ofertToShow" class="ofert">
+    <p class="puesto">{{ ofert.puesto | titlecase}}</p>
+    <img class="img" src="{{ ofert.portada }}" alt="portada" />
+    <p class="salario">{{ ofert.salario }}€/mes</p>
+    <button (click)="navigateToDetail(ofert._id)">Ver más</button>
+    <button (click)="editOfert(ofert._id)">Editar</button>
+  </div>
+</div>
+
+

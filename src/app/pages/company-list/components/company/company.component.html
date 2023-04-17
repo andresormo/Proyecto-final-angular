@@ -1,0 +1,9 @@
+
+  <div *ngIf="empresaToShow" class="empresa" >
+    <p class="empresa__nombre">{{empresaToShow.nombre | titlecase}}</p>
+    <img class="empresa__portada" src={{empresaToShow.portada}} alt="">
+    <p class="empresa__cif">{{empresaToShow.cif}}</p>
+    <button  (click)="navigateToDetailCompany(empresaToShow._id)">Ver empresa</button>
+  </div>
+
+

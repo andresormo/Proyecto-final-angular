@@ -1,0 +1,20 @@
+<div class="main">
+
+  <form class="form"
+  *ngIf="loginForm"
+  [formGroup]="loginForm"
+  (submit)="login()"
+  >
+    <input class="input" type="email" placeholder="Email"  formControlName="email">
+    <input class="input" type="password" placeholder="Password" formControlName="password">
+    <button class="btn" type="submit">Login</button>
+    <button class="btn btn--sign" type="submit" (click)="navigateToSignUp()">SignIn</button>
+
+    <span *ngIf="formError" class="control__error">Usuario o contraseña incorrectos</span>
+    <img class="logo" src="../../../assets/GoodJob.png" alt="logo">
+  </form>
+
+</div>
+
+
+

@@ -1,0 +1,9 @@
+<div
+*ngIf="oferta"
+class="main"
+>
+<p>{{oferta.puesto}}</p>
+<p>{{oferta.descripcion}}</p>
+<p *ngFor="let user of oferta.empresa">{{user.nombre}}</p>
+<button *ngFor="let user of oferta.empresa" (click)="navigateToDetailCompany(user._id)">Ver empresa</button>
+</div>

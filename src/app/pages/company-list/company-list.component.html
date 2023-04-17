@@ -1,0 +1,12 @@
+<input
+[(ngModel)]="inputValue"
+>
+<div *ngIf="company"
+class="container"
+>
+<app-company
+*ngFor="let company of company | filterCompany:inputValue"
+[empresaToShow]="company"
+></app-company>
+</div>
+

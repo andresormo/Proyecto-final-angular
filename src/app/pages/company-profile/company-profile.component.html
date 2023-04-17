@@ -1,0 +1,13 @@
+
+<div class="component">
+  <button (click)="createOfert()"
+  >CREAR OFERTA</button>
+  <h3 class="title_detail">Mis Ofertas</h3>
+  <div *ngIf="ofertToShow"
+  >
+  <app-own-oferts
+  [ofertToShow]="ofertToShow"
+  ></app-own-oferts>
+  </div>
+
+</div>

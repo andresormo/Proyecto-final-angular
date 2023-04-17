@@ -1,0 +1,15 @@
+<input
+[(ngModel)]="inputValue"
+>
+<div
+*ngIf="oferta"
+class="container"
+>
+  <app-ofert
+  [ofertToShow]="ofert"
+  *ngFor="let ofert of oferta | filter:inputValue"
+  ></app-ofert>
+</div>
+
+
+

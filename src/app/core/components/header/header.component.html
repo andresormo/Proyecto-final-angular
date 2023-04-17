@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="header__nav">
+    <a
+      *ngFor="let link of headerLinksElement"
+      class="link"
+      routerLinkActive="link--active"
+      [routerLink]="[link.url]"
+    >
+      {{ link.content }}</a
+    >
+  </div>
+  <div class="header__rigth">
+    <a class="link--logo header__logo" ><img class="header__img" src="../../../../assets/GoodJob.png" alt="logo"></a>
+    <button class="btn " *ngIf="isLogged" (click)="logOut()" [routerLink]="['home']">
+      Logout
+    </button>
+    <button class="btn btn--in"  *ngIf="!isLogged" (click)="logIn()" >SignIn</button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="component">
+  <h2 *ngIf="userCompany" class="title">{{ userCompany.nombre }}</h2>
+  <h3 class="title_detail">Ofertas de esta empresa</h3>
+  <div class="container">
+    <div *ngIf="ofert" class="empresa">
+      <div *ngFor="let oferta of ofert" class="ofert">
+        <p class="puesto">{{ oferta.puesto | titlecase }}</p>
+        <img class="img" src="{{ oferta.portada }}" alt="" />
+        <p class="salario">{{ oferta.salario }}€/mes</p>
+        <button (click)="navigateToDetail(oferta._id)">Ver más</button>
+      </div>
+    </div>
+  </div>
+</div>
