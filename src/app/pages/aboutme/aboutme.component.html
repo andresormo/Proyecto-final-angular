@@ -1,0 +1,50 @@
+<div class="main">
+  <div class="seccion">
+    <h2 class="title">Datos sobre el proyecto</h2>
+  </div>
+  <div class="seccion ofert">
+    <h4 class="title">Idea principal</h4>
+    <p>
+      Este proyecto se hizo para una primera práctica en solitario con el
+      FrameWork de Angular, en él intento hacer uso de de todo lo aprendido
+      durante el modulo.
+    </p>
+  </div>
+  <div class="seccion ofert">
+    <h4 class="title">Pasos que seguí</h4>
+    <p>
+      En primero lugar hice una Api con Node.js en la que implementé dos
+      colecciones, 'users' y 'ofertas', donde ambas estan relacionadas con el Id
+      del 'users' que la creó. Esta tiene unos middlewares de autenticacion para
+      evitar que aquella persona que no esté registrada no pueda crear una
+      oferta y sobre todo que no pueda modificar ni eliminar ninguna de ellas.
+    </p>
+    <p>
+      A continiación me dispuse a crear el proyecto de Angular en el que utilicé
+      la arquitectura qque dimos en clase, aunque es cierto que quizás tenga
+      algunas mejoras, ya que al ser la primera App que realizo, creo que esta
+      prodia estar mejor optimizada. En la carpeta App de Angular cree 3
+      carpetas más: core, pages, shared. En core creé unos componentes que van
+      entodas las paginas como son el 'header' y el 'footer', también en esa
+      carpeta se encuentran los servicios que es dedes donde se hacen laas
+      peticiones a la Api. Además utilicé unas guards y unos interceptors para
+      evitar el paso en ciertas paginas a quellas personas que no estén
+      registradas en la App, creo que es en lo que más tiempo invertí y lo que
+      mas complicado me resultó.
+    </p>
+    <p>
+      En pages estás las diferntes paginas de la App. y en shared se encuentran
+      los formularios y las Pipes.
+    </p>
+  </div>
+  <div class="seccion ofert">
+    <h4 class="title">¿Cómo funciona esta App?</h4>
+    <p>
+      Cualquier persona puede navegar por esta página viendo ofertas de trabajos
+      creadas por empresas, además pueden ver los datos de la empresa y cuantas
+      ofertas tienen publicadas. Para poder publicar ofertas se necesita hacer
+      un registro con los datos de la empresa y una vez tenemos la cuenta creada
+      ya podemos crear, modificar y eliminar ofertas.
+    </p>
+  </div>
+</div>

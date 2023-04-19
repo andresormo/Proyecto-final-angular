@@ -2,9 +2,9 @@
   <p class="puesto">{{ ofert.puesto | titlecase }}</p>
   <img class="img" src="{{ ofert.portada }}" alt="portada" />
   <p class="salario">{{ ofert.salario }}€/mes</p>
-  <div class="btn">
+  <div class="main">
     <button (click)="navigateToDetail(ofert._id)">Ver más</button>
     <button (click)="editOfert(ofert._id)">Editar</button>
-    <button class="btn btn--delete" (click)="deletedOfert()">Eliminar</button>
+    <button class="btn--delete"  (click)="deletedOfert()">Eliminar</button>
   </div>
 </div>
