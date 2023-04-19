@@ -18,7 +18,15 @@ body{
   align-items: center;
 }
 
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 button {
+  width: 100px;
   margin-top: 10px;
   background-color: #38b6ff;
   color: #fff;
@@ -32,10 +40,42 @@ button:hover {
   background-color: #0056b3;
 }
 
+.btn{
+  display: flex;
+  flex-direction: column;
+
+}
+.btn{
+  background-color: #f1cfcfe1;
+  border: none;
+  width: 100px;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  &--sign{
+background-color: #f1cfcfe1;
+  }
+  &:hover{
+    background-color:  #ee8d8de1;
+    }
+
+    &--delete{
+      background-color: red;
+    }
+    &--delete:hover{
+      background-color: rgb(173, 3, 3);
+    }
+    &--profile{
+      background-color: transparent;
+    }
+}
+
 .title{
   background-color:#38b6ff ;
   color: white;
-  width: 250px;
+  width: 300px;
   text-align: center;
   border-radius: 25px;
   margin: 10px;
@@ -56,4 +96,87 @@ button:hover {
 .input{
   border-radius: 25px;
   text-align: center;
+}
+
+input {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 90%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.link {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  &:hover {
+    color: white;
+    background-color: #38b6ff;
+    background: linear-gradient(to bottom, #38b6ff, #f1cfcf);
+    transition: color 0.3s ease;
+    border-radius: 25px;
+  }
+  &--active {
+    background: #f1cfcf;
+    border-radius: 25px;
+  }
+  &--logo {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &__icon{
+    width: 50px;
+    margin: 20px;
+    text-align: center;
+  }
+  &__icon:hover{
+    border-radius: 0;
+    font-size: 25px;
+    background: #38b6ff;
+  }
+}
+
+.title_detail{
+  background-color: #f1cfcfe1;
+  color: white;
+  width: 150px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+
+.ofert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+.puesto {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.salario {
+  font-size: 18px;
+  margin-bottom: 10px;
 }

@@ -1,6 +1,5 @@
 .footer{
   width: 100%;
-  height: 150px;
   background-color:#38b6ff;
   position:relative;
   bottom: 0px;
@@ -10,3 +9,18 @@
   justify-content: center;
   bottom: 0;
 }
+
+.seccion{
+width: 400px;
+height: 200px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+}
+
+.img{
+  width: 200px;
+  height: 200px;
+}
+

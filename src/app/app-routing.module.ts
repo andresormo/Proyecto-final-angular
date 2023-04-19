@@ -63,6 +63,11 @@ const routes: Routes = [
     import('./pages/company-detail/company-detail.module').then((m)=>m.CompanyDetailModule)
   },
   {
+    path:'aboutme',
+    loadChildren:()=>
+    import('./pages/aboutme/aboutme.module').then((m)=>m.AboutmeModule)
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./pages/not-found/not-found.module').then((m) => m.NotFoundModule)
