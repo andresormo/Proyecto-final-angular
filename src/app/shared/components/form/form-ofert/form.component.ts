@@ -24,6 +24,7 @@ public sectorOption = sectorOption;
 public hasFormError: boolean= false;
 public hasSuccess: boolean = false;
 public hasDeleted: boolean = false;
+public portada$:string = '';
 
 
 constructor(
@@ -35,6 +36,9 @@ constructor(
 
 public ngOnInit(): void {
   this.initForm();
+  this.ofertForm?.get('portada')?.valueChanges.subscribe((value:string)=>{
+    this.portada$ = value;
+  })
 }
 
 public handleOfert(){
@@ -45,6 +49,7 @@ public handleOfert(){
     }else{
       this.createOfert();
       this.hasSuccess = true;
+      console.log(this.ofertForm?.value);
     }
     this.ofertForm?.reset();
 
@@ -57,6 +62,8 @@ private createOfert(){
   this.hasFormError = false;
   this.ofertService.createOfert(this.ofertForm?.value).subscribe((ofert)=>{
       this.router.navigate(['../company-profile']);
+
+
   })
 }
 
@@ -72,6 +79,9 @@ public returnToProfile(){
 }
 
 private initForm(){
+  if(this.oferta){
+    this.portada$ = this.oferta.portada[0];
+  }
   const userId = this.userService.getUserId();
   this.ofertForm = this.formBuilder.group({
     empresa: [userId],
@@ -80,7 +90,7 @@ private initForm(){
     descripcion: new FormControl(this.oferta?.descripcion ||''),
     contrato: new FormControl(this.oferta?.contrato ||'', [Validators.required]),
     sector: new FormControl(this.oferta?.sector ||'',[Validators.required]),
-    portada:new FormControl(this.oferta?.portada ||'https://cdn-icons-png.flaticon.com/512/25/25634.png'),
+    portada:[this.oferta?.portada ||''],
     telefono: new FormControl(this.oferta?.telefono ||'', [Validators.required]),
     email: new FormControl (this.oferta?.email ||'', [Validators.required, Validators.email]),
    });

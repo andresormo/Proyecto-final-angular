@@ -7,29 +7,28 @@
   <div class="seccion">
     <h4 class="title">E-mail</h4>
     <input class="input"  formControlName="email" />
+
     <p
       class="control__error"
       *ngIf="!userForm.get('email')?.valid && userForm.get('email')?.touched"
     >
-      El campo es requerido
+      Email no válido o campo incompleto
     </p>
   </div>
   <div class="seccion">
     <h4 class="title">Contraseña</h4>
-    <input class="input" type="password" formControlName="password" />
+    <input class="input" type="password" formControlName="password"/>
     <p
       class="control__error"
       *ngIf="
-        !userForm.get('password')?.valid && userForm.get('password')?.touched
+        !userForm.get('password')?.valid
       "
     >
-      El campo es requerido o hay errores en el campo
+    Contraseña no válida (8 caracteres, mínimo 1 letra y 1 número) o campo incompleto
     </p>
   </div>
 
   <div class="seccion">
-    <!-- <h4 class="title">Cuenta de usuario</h4> -->
-    <!-- <input type="radio" name="rol" value="user" formControlName="rol" /> -->
     <h4 class="title">Cuenta de empresa</h4>
     <input type="radio" name="rol" value="company" formControlName="rol" />
   </div>
@@ -41,7 +40,7 @@
       class="control__error"
       *ngIf="!userForm.get('nombre')?.valid && userForm.get('nombre')?.touched"
     >
-      El campo es requerido
+      Campo incompleto
     </p>
   </div>
 
@@ -52,7 +51,7 @@
       class="control__error"
       *ngIf="!userForm.get('cif')?.valid && userForm.get('cif')?.touched"
     >
-      El campo es requerido
+    Cif no válido (letra en mayúscula) o campo incompleto
     </p>
   </div>
 
@@ -65,7 +64,7 @@
         !userForm.get('direccion')?.valid && userForm.get('direccion')?.touched
       "
     >
-      El campo es requerido
+    Campo incompleto
     </p>
   </div>
 
@@ -76,7 +75,7 @@
       class="control__error"
       *ngIf="!userForm.get('numero')?.valid && userForm.get('numero')?.touched"
     >
-      El campo es requerido
+    Campo incompleto
     </p>
   </div>
 
@@ -87,7 +86,7 @@
       class="control__error"
       *ngIf="!userForm.get('cp')?.valid && userForm.get('cp')?.touched"
     >
-      El campo es requerido
+    Campo incompleto
     </p>
   </div>
 
@@ -100,13 +99,13 @@
         !userForm.get('localidad')?.valid && userForm.get('localidad')?.touched
       "
     >
-      El campo es requerido
+    Campo incompleto
     </p>
   </div>
 
   <div class="seccion">
     <h4 class="title">Imagen de la empresa</h4>
-    <input  class="input"  formControlName="portada" type="file" />
+    <input  class="input input--file"  formControlName="portada" type="file"/>
   </div>
 
   <div class="seccion">
@@ -122,7 +121,7 @@
   <div class="seccion">
     <button type="submit">Enviar</button>
     <span *ngIf="hasFormError" class="control__error"
-      >Hay errores en el formulario, revisalo</span
+      >Hay errores en el formulario, revísalo</span
     >
     <span *ngIf="hasSuccess" class="control__success">
       Éxito creando el producto, puedes verlo en la

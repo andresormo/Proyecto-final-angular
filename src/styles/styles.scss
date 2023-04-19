@@ -27,7 +27,7 @@ body{
 
 button {
   width: 100px;
-  margin-top: 10px;
+  margin: 10px;
   background-color: #38b6ff;
   color: #fff;
   padding: 10px 20px;
@@ -83,24 +83,22 @@ background-color: #f1cfcfe1;
 
 
 .control__error {
+  text-align: center;
   color: #dc3545;
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 5px;
 }
 
 .control__success {
+  text-align: center;
   color: #28a745;
   font-size: 14px;
   margin-top: 5px;
 }
-.input{
-  border-radius: 25px;
-  text-align: center;
-}
+
 
 input {
   margin-top: 10px;
-  padding: 10px;
   border: 2px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
@@ -110,6 +108,14 @@ input {
   text-align: center;
 }
 
+.input{
+  border-radius: 25px;
+  text-align: center;
+  &--file{
+    font-size: 8px;
+    padding: 0;
+  }
+}
 
 .link {
   text-decoration: none;
