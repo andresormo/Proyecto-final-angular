@@ -6,7 +6,7 @@
   enctype="multipart/form-data"
   class="form"
   >
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Puesto que demanda</h4>
     <input
     formControlName="puesto"
@@ -19,7 +19,7 @@
     >El campo es requerido</p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Salario mensual</h4>
     <input
     formControlName="salario"
@@ -27,7 +27,7 @@
     >
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Describe la oferta</h4>
     <textarea class="textarea"
     placeholder="Descripcion"
@@ -35,7 +35,7 @@
     ></textarea>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Selecciona el tipo de contrato</h4>
     <select
     formControlName="contrato"
@@ -52,7 +52,7 @@
   >El campo es requerido</p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Seleccion el sector</h4>
     <select
     formControlName="sector">
@@ -68,7 +68,7 @@
     >El campo es requerido</p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title" >Añade una portada para tu oferta</h4>
     <input type="file"
     (change)="onFileSelected($event)"
@@ -76,7 +76,7 @@
     >
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Agrega un número de telefono</h4>
     <input
     formControlName="telefono"
@@ -89,7 +89,7 @@
     >El campo es requerido</p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Añade el email</h4>
     <input
     formControlName="email"
@@ -102,7 +102,7 @@
     >El campo es requerido</p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <button type="submit">{{editMode ? 'Editar' :'Crear'}}</button>
     <button *ngIf="editMode" class="btn--delete">Eliminar</button>
     <span *ngIf="hasDeleted" class="control__success">Oferta eliminada con éxito</span>

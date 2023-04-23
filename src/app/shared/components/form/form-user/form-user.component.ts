@@ -36,8 +36,6 @@ public ngOnInit(): void {
 }
 
 public handleUser(){
-  console.log(this.userForm?.valid, this.userForm?.value);
-
   if(this.userForm?.valid){
     this.createUser();
     this.userForm?.reset();
@@ -51,6 +49,8 @@ public handleUser(){
 private createUser(){
   this.hasFormError = false;
   this.userServicie.signUp(this.userForm?.value).subscribe();
+  console.log(this.userForm?.value);
+
 }
 
 

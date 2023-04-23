@@ -6,7 +6,7 @@ import {
   ReplaySubject,
   tap,
 } from 'rxjs';
-import { IUser, IUserSignInResponse, UserRequestBody } from './models/auth.models';
+import { IUser, IUserSignInResponse, UserRequestBody} from './models/auth.models';
 
 // const AUTH_URL = 'https://goodjob-ggtu.vercel.app/users';
 
@@ -41,7 +41,6 @@ public getUserById(id:string):Observable<IUser>{
           email: res.userToLog.email,
           id: res.userToLog._id,
         });
-        console.log(this.isLogged);
         localStorage.setItem(TOKEN_KEY, userStorage);
         this.isLogged$.next(true);
         this.router.navigate(['company-profile']);
@@ -52,7 +51,6 @@ public getUserById(id:string):Observable<IUser>{
   public signUp(body: UserRequestBody): Observable<IUser> {
     return this.http.post<IUser>(`${AUTH_URL}/`, body).pipe(
       tap((user)=>{
-        console.log(user)
         this.router.navigate(['company-profile'])
       })
     );

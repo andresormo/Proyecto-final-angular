@@ -48,11 +48,9 @@ export class FormComponent implements OnInit {
     if (this.ofertForm?.valid) {
       if (this.editMode) {
         this.editOfert();
-        console.log(this.ofertForm?.value);
       } else {
         this.createOfert();
         this.hasSuccess = true;
-        console.log(this.ofertForm?.value);
       }
       this.ofertForm?.reset();
     } else {
@@ -90,7 +88,6 @@ export class FormComponent implements OnInit {
       const portadaControl = this.ofertForm?.get('portada');
       if (portadaControl) {
         portadaControl.setValue(file);
-        console.log(file);
       }
     }
   }

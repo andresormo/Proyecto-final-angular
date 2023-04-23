@@ -30,8 +30,6 @@ export class CompanyProfileComponent implements OnInit {
     this.ofertService.getOfert().subscribe((ofert: OfertI[]) => {
       if (idUser) {
         const userOferts = ofert.filter((empresa) => {
-          console.log(empresa);
-
           return empresa.empresa.some((nombre) => nombre._id === idUser);
         });
         this.oferts = userOferts;

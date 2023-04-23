@@ -4,7 +4,7 @@
   (submit)="handleUser()"
   class="form"
 >
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">E-mail</h4>
     <input class="input"  formControlName="email" />
 
@@ -15,7 +15,7 @@
       Email no válido o campo incompleto
     </p>
   </div>
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Contraseña</h4>
     <input class="input" type="password" formControlName="password"/>
     <p
@@ -28,12 +28,12 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Cuenta de empresa</h4>
     <input type="radio" name="rol" value="company" formControlName="rol" />
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Nombre de la Empresa</h4>
     <input class="input" formControlName="nombre" />
     <p
@@ -44,7 +44,7 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Cif de la empresa</h4>
     <input class="input" formControlName="cif" />
     <p
@@ -55,7 +55,7 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Direccion de la empresa</h4>
     <input class="input" formControlName="direccion" />
     <p
@@ -68,7 +68,7 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Número</h4>
     <input class="input" formControlName="numero" />
     <p
@@ -79,7 +79,7 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Codigo postal</h4>
     <input  class="input"  formControlName="cp" />
     <p
@@ -90,7 +90,7 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Localidad de la empresa</h4>
     <input  class="input"  formControlName="localidad" />
     <p
@@ -103,29 +103,30 @@
     </p>
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Imagen de la empresa</h4>
-    <input  class="input input--file"  formControlName="portada" type="file"/>
+    <input formControlName="portada"
+     type="file"
+     />
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <h4 class="title">Capital de la empresa</h4>
     <input  class="input"  formControlName="capital" />
   </div>
 
-  <div class="seccion">
-    <h4 class="title">Numero de trabajadores de la empresa</h4>
+  <div class="seccion_form">
+    <h4 class="title">Número de trabajadores de la empresa</h4>
     <input  class="input"  formControlName="trabajadores" />
   </div>
 
-  <div class="seccion">
+  <div class="seccion_form">
     <button type="submit">Enviar</button>
     <span *ngIf="hasFormError" class="control__error"
       >Hay errores en el formulario, revísalo</span
     >
     <span *ngIf="hasSuccess" class="control__success">
-      Éxito creando el producto, puedes verlo en la
-      <a [routerLink]="['../company-profile']">lista</a>
+      Éxito creando el usuario
     </span>
   </div>
 </form>
