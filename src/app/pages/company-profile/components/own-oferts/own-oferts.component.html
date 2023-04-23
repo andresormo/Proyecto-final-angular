@@ -1,6 +1,6 @@
 <div *ngIf="ofert" class="ofert">
   <p class="puesto">{{ ofert.puesto | titlecase }}</p>
-  <img class="img" src="{{ ofert.portada }}" alt="portada" />
+  <img class="img--portada" src="{{ ofert.portada }}" alt="portada" />
   <p class="salario">{{ ofert.salario }}€/mes</p>
   <div>
     <button (click)="navigateToDetail(ofert._id)">Ver más</button>

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 // const API_URL= 'https://goodjob-ggtu.vercel.app'
 
-const API_URL='http://localhost:8000'
+const API_URL='https://ultima-prueba-xz69.vercel.app'
 @Injectable({
   providedIn: 'root'
 })

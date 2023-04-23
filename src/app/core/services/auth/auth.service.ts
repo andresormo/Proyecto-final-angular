@@ -11,7 +11,7 @@ import { IUser, IUserSignInResponse, UserRequestBody} from './models/auth.models
 // const AUTH_URL = 'https://goodjob-ggtu.vercel.app/users';
 
 
-const AUTH_URL = 'http://localhost:8000/users'
+const AUTH_URL = 'https://ultima-prueba-xz69.vercel.app/users'
 const TOKEN_KEY = 'jwt-auth-token';
 
 @Injectable({
