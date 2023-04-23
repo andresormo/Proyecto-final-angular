@@ -3,6 +3,7 @@
   *ngIf="ofertForm"
   [formGroup]="ofertForm"
   (submit)="handleOfert()"
+  enctype="multipart/form-data"
   class="form"
   >
   <div class="seccion">
@@ -68,8 +69,9 @@
   </div>
 
   <div class="seccion">
-    <h4 class="title">Añade una portada para tu oferta</h4>
+    <h4 class="title" >Añade una portada para tu oferta</h4>
     <input type="file"
+    (change)="onFileSelected($event)"
     formControlName="portada"
     >
   </div>

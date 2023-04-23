@@ -44,7 +44,7 @@ export interface OfertRequestBody{
   descripcion:string,
   sector:SectorType,
   contrato:ContratosTypes,
-  portada: string[],
+  portada: File,
   telefono:string,
   email:string
 }

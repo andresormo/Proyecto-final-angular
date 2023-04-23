@@ -7,6 +7,8 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http'
 import { OfertListModule } from './pages/ofert-list/ofert-list.module';
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +18,7 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
-    OfertListModule
+    OfertListModule,
   ],
   providers: [
     {

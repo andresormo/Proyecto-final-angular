@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormComponent } from './components/form/form-ofert/form.component';
@@ -6,7 +7,7 @@ import { RouterModule } from '@angular/router';
 import { FormUserComponent } from './components/form/form-user/form-user.component';
 import { FilterPipe } from './pipes/filterOfert/filter.pipe';
 import { FilterCompanyPipe } from './pipes/filterCompany/filter-company.pipe';
-
+import { CloudinaryModule } from '@cloudinary/ng';
 
 
 @NgModule({
@@ -20,13 +21,14 @@ import { FilterCompanyPipe } from './pipes/filterCompany/filter-company.pipe';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
-  ],
+    RouterModule,
+    CloudinaryModule
+    ],
   exports:[
     FormComponent,
     FormUserComponent,
     FilterPipe,
-    FilterCompanyPipe
+    FilterCompanyPipe,
   ]
 })
 export class SharedModule { }

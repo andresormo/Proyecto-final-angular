@@ -1,17 +1,16 @@
 import { Observable, map } from 'rxjs';
-import {
-  ApiOfertI,
-  OfertI,
-  OfertRequestBody,
-} from './models/ofert.interface';
+import { ApiOfertI, OfertI, OfertRequestBody } from './models/ofert.interface';
 import { Injectable } from '@angular/core';
 import { ApiOfertService } from './api/api-ofert.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OfertService {
-  constructor(private apiOfertService: ApiOfertService) {}
+  constructor(
+    private apiOfertService: ApiOfertService,
+  ) {}
   //GET
   public getOfert(): Observable<OfertI[]> {
     return this.apiOfertService
@@ -26,17 +25,15 @@ export class OfertService {
       .pipe(map((apiOfert: ApiOfertI) => this.transformOfertOne(apiOfert)));
   }
 
-
   // CREATE
-  public createOfert(body: OfertRequestBody): Observable<OfertI> {
+  public createOfert(body: FormData): Observable<OfertI> {
     return this.apiOfertService
       .createApiOfert(body)
       .pipe(map((apiOfert) => this.transformOfertOne(apiOfert)));
   }
 
-
   //EDIT
-  public editOfert(body: OfertRequestBody, id: string): Observable<OfertI> {
+  public editOfert(body: FormData, id: string): Observable<OfertI> {
     return this.apiOfertService
       .editApiOfert(body, id)
       .pipe(map((apiOfert) => this.transformOfertOne(apiOfert)));
@@ -57,7 +54,6 @@ export class OfertService {
     );
     return ofertTransformed;
   }
-
 
   private transformOfertOne(apiOfert: ApiOfertI): OfertI {
     delete apiOfert.__v, delete apiOfert.createdAt, delete apiOfert.updateAt;
