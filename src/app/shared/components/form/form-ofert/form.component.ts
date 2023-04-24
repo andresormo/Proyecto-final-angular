@@ -10,7 +10,6 @@ import { contratoOption, sectorOption } from '../config/form.config';
 import { OfertService } from 'src/app/core/services/ofert/ofert.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
-import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -21,6 +20,7 @@ import { HttpClient } from '@angular/common/http';
 export class FormComponent implements OnInit {
   @Input() public oferta?: OfertI;
   @Input() public editMode: boolean = false;
+
 
   public ofertForm?: FormGroup;
   public contratoOption = contratoOption;
@@ -118,7 +118,7 @@ export class FormComponent implements OnInit {
         Validators.required,
       ]),
       sector: new FormControl(this.oferta?.sector || '', [Validators.required]),
-      portada: new FormControl(this.oferta?.portada || ''),
+      portada: new FormControl(this.oferta?.portada || 'https://cdn-icons-png.flaticon.com/512/25/25634.png'),
       telefono: new FormControl(this.oferta?.telefono || '', [
         Validators.required,
       ]),

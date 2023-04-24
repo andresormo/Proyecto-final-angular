@@ -4,9 +4,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 
-// const API_URL= 'https://goodjob-ggtu.vercel.app'
 
-const API_URL='https://ultima-prueba-xz69.vercel.app'
+const API_URL='http://localhost:8000'
 @Injectable({
   providedIn: 'root'
 })
@@ -25,7 +24,7 @@ export class ApiOfertService {
   }
 
   public createApiOfert(body: FormData): Observable<ApiOfertI>{
-    return this.http.post<ApiOfertI>(`${API_URL}/ofertas/`, body);
+    return this.http.post<ApiOfertI>(`${API_URL}/ofertas`, body);
   }
 
   public editApiOfert(body:FormData, id:string): Observable<ApiOfertI>{

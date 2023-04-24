@@ -104,7 +104,6 @@
 
   <div class="seccion_form">
     <button type="submit">{{editMode ? 'Editar' :'Crear'}}</button>
-    <button *ngIf="editMode" class="btn--delete">Eliminar</button>
     <span *ngIf="hasDeleted" class="control__success">Oferta eliminada con éxito</span>
     <span *ngIf="hasFormError" class="control__error">Hay errores en el formulario, revisalo</span>
     <span *ngIf="hasSuccess" class="control__success">

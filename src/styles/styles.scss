@@ -26,6 +26,7 @@ body{
 }
 
 button {
+  text-align: center;
   width: 100px;
   margin: 10px;
   background-color: #38b6ff;
@@ -44,6 +45,7 @@ button:hover {
   background-color: #f1cfcfe1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: none;
   width: 100px;
   border-radius: 25px;
