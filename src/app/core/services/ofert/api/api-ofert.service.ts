@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 
 
-const API_URL='http://localhost:8000'
+const API_URL='https://gooodjob-rrwu.vercel.app'
 @Injectable({
   providedIn: 'root'
 })
